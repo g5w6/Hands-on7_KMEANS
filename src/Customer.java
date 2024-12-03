@@ -1,4 +1,3 @@
-
 import java.util.Objects;
 
 public class Customer {
@@ -8,6 +7,7 @@ public class Customer {
     private final int annualIncome;
     private final int spendingScore;
 
+    //Inicialiaza un nuevo cliente con los valores proporcionados customerID, gender, age, annualIncome, spendingScore
     public Customer(int customerId, String gender, int age, int annualIncome, int spendingScore) {
         this.customerId = customerId;
         this.gender = gender;
@@ -36,6 +36,7 @@ public class Customer {
         return gender;
     }
 
+    //Compara el objeto customer con otro objeto para determinar si son iguales
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -44,11 +45,13 @@ public class Customer {
         return age == customer.age && annualIncome == customer.annualIncome && spendingScore == customer.spendingScore && gender.equals(customer.gender);
     }
 
+    //Devuelve el hashcode del objeto customer, basado en sus atributos
     @Override
     public int hashCode() {
         return Objects.hash(gender, age, annualIncome, spendingScore);
     }
 
+    //Devuelve una representación en cadena de texto del objeto customer
     @Override
     public String toString() {
         return "Customer{" +

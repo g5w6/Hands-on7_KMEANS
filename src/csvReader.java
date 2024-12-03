@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+    //Lee un archivo CSV linea por linea y convierte cada linea en un objeto Customer, hasta alcanzar el límite especificado
 public class csvReader {
     public static List<Customer> readCSV(String filePath, int limit) {
         List<Customer> customers = new ArrayList<>();
